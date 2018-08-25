@@ -1,0 +1,9 @@
+gcloud container clusters create webfront --zone us-central1-c --num-nodes 2
+gcloud container clusters list
+kubectl run nginx --image=nginx:1.10.0
+kubectl get pods
+kubectl expose deployment nginx --port 80 --type LoadBalancer
+kubectl get deployments
+kubectl get services
+kubectl scale deployment nginx --replicas 3
+kubectl get pods
